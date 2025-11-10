@@ -8,7 +8,7 @@ export default function Login() {
     const codeChallenge = await generateCodeChallenge(codeVerifier);
     localStorage.setItem('pkce_code_verifier', codeVerifier);
 
-    const authUrl = `https://auth.mercadolibre.com.br/authorization?response_type=code&client_id=SEU_APP_ID&redirect_uri=https://meli-pick-genius.netlify.app/callback&code_challenge=${codeChallenge}&code_challenge_method=S256&scope=read%20write%20offline_access%20orders%20items%20shipments`;
+    const authUrl = `https://auth.mercadolibre.com.br/authorization?response_type=code&client_id=3183856155449075&redirect_uri=https://meli-pick-genius.netlify.app/callback&code_challenge=${codeChallenge}&code_challenge_method=S256&scope=read%20write%20offline_access%20orders%20items%20shipments`;
     window.location.href = authUrl;
   };
 
